@@ -12,16 +12,18 @@ export default function CheckboxGroup(props){
     return(
         <div className={props.className}>
             <div>
-                <input type="checkbox" id={0} checked={allSelected ? true : false} onChange={e => {
-                        setAllSelected(!allSelected)
-                        toggleSelectAll(allSelected, options.length, setSelected)
-                    }} />
-                <label className='margin-05' htmlFor={0}>Select all</label>
+                <div className='select-all'>
+                    <input className='' type="checkbox" id={0} checked={allSelected ? true : false} onChange={e => {
+                            setAllSelected(!allSelected)
+                            toggleSelectAll(allSelected, options.length, setSelected)
+                        }} />
+                    <label className='label' htmlFor={0}>Alles Auswählen</label>
+                </div>
 
                 { options?.map(o => {
                     id++
                     return(
-                        <div key={id}>
+                        <div className='checkrow' key={id}>
                             <input type="checkbox" id={id} value={o} checked={allSelected ? true : selected.includes(id - 1) ? true : false} 
                                 onChange={e => {
                                     toggleSelect(e.target.id, selected, setSelected)
@@ -30,13 +32,14 @@ export default function CheckboxGroup(props){
                                         setAllSelected(false)
                                     }
                                 }} />
-                            <label className='margin-05' htmlFor={id}>{o}</label>
+                            <label className='label' htmlFor={id}>{o}</label>
                         </div>
                     )
                 })}
 
             </div>
-            <div>
+            <div className='selected'>
+                <h3>Ausgewählt</h3>
                 { selected?.map(s => {
                     return(
                         <p key={s}>{options[s]}</p>

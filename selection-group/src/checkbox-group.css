@@ -1,7 +1,26 @@
-.margin-05{
-    margin: .5rem;
+p {
+    margin: .2rem;
 }
 
-p {
-    margin: 0;
+input[type="checkbox"] {
+    accent-color: #FFB600;
+    vertical-align: baseline;
 }
+
+.select-all {
+    margin-bottom: .6rem;
+}
+
+.label {
+    margin-left: .5rem;
+}
+
+.checkrow{
+    margin-bottom: .2rem;
+}
+
+.selected {
+    margin-top: 2rem;
+}
+
+

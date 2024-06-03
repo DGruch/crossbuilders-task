@@ -4,7 +4,10 @@ import CheckboxGroup from './checkbox-group';
 function App() {
   return (
     <div className="App">
-      <CheckboxGroup options={["a", "b", "c"]} />
+      <div className='card'>
+        <h2>Wo haben sie Vermögen?</h2>
+        <CheckboxGroup options={["Girokonto", "Tagesgeld", "Aktien", "ETF"]} />
+      </div>   
     </div>
   );
 }

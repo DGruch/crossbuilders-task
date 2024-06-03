@@ -5,3 +5,12 @@
   justify-content: center;
   align-items: center;
 }
+
+.card{
+  width: 20rem;
+  height: 30rem;
+  padding: 1rem;
+  background-color: #eeeeee;
+  box-shadow: rgba(160, 160, 160, 0.2) 0px 8px 24px;
+  border-radius: 10px;
+}
