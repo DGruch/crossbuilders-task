@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function CheckboxGroup(props){
 
-    const [options, setOptions] = useState(props.options)
+    const [options] = useState(props.options)
     const [selected, setSelected] = useState([])
     const [allSelected, setAllSelected] = useState(false)
 
@@ -30,7 +30,7 @@ export default function CheckboxGroup(props){
                                     
                                     if(allSelected){
                                         setAllSelected(false)
-                                    }else if(selected.length == options.length){
+                                    }else if(selected.length === options.length){
                                         setAllSelected(true)
                                     }
                                 }} />
