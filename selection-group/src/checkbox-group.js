@@ -30,6 +30,8 @@ export default function CheckboxGroup(props){
                                     
                                     if(allSelected){
                                         setAllSelected(false)
+                                    }else if(selected.length == options.length){
+                                        setAllSelected(true)
                                     }
                                 }} />
                             <label className='label' htmlFor={id}>{o}</label>
